@@ -8,7 +8,7 @@ Application to host timer activities with others. Minimalist design and function
     - styled using [ChakraUI](https://chakra-ui.com/)
     - library to host a shared session for the chat, sending an invite link, and sharing a session with each other
 
-#### 📃Tasks/Todo:
+#### 📃Tasks/Todo📃:
 
 * implement todo list 
 * implement shared session (todo list updates in real time on everyone's screen)
@@ -16,3 +16,7 @@ Application to host timer activities with others. Minimalist design and function
 * implement chat functionality (wishlist)
 * decide where to host
 * decide how to host reactjs app
+
+#### 📝Notes📝
+
+* For creating the webserver, the custom url should be created after the user opts to create a room avoid creating a room unecessarily.
