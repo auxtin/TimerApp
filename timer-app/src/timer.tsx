@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { nanoid } from 'nanoid'
 
 export default function Timer() {
     const [minutes, setMinutes] = useState(0);
@@ -27,10 +28,11 @@ export default function Timer() {
         }, 1000);
     }, [seconds]);
 
-    const timerMinutes = minutes < 10 ?`0${minutes}` : minutes;
+    const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
     const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
+    const url = nanoid(6);
     return <div className="timer">Hi there👋 
-        <div className = "title">Timer⏲</div>
+        <div className = "title">⏲Timer⏲ @ {url}</div>
         <div className="message">
             {displayMessage && <div>You did it! 🎆🎇✅✔</div>}
         </div>

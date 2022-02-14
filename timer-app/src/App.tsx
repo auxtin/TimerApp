@@ -16,7 +16,7 @@ import './App.css';
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
+    <Box textAlign="center" fontSize="xl" bgGradient='linear(to-r, gray.300, yellow.400, pink.200)'>
       <Grid minH="10vh" p={3}>
         <ColorModeSwitcher justifySelf="flex-end" />
         <VStack spacing={8}>
