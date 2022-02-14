@@ -48,3 +48,4 @@ chrome-user-data
 *.swp
 *.swo
 
+package-lock.json

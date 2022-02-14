@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import Timer from "./timer";
+import RoomLink from "./roomLink";
 import './App.css';
 // import { Logo } from "./Logo"
 
@@ -21,6 +22,7 @@ export const App = () => (
         <ColorModeSwitcher justifySelf="flex-end" />
         <VStack spacing={8}>
           <Timer/>
+          <RoomLink/>
         </VStack>
       </Grid>
     </Box>

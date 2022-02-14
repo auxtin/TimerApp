@@ -32,12 +32,10 @@ export default function Timer() {
     const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
     const url = nanoid(6);
     return <div className="timer">Hi there👋 
-        <div className = "title">⏲Timer⏲ @ {url}</div>
+        <div className = "title">⏲Timer⏲</div>
         <div className="message">
             {displayMessage && <div>You did it! 🎆🎇✅✔</div>}
         </div>
         <div className="clock">{timerMinutes}:{timerSeconds}</div>
     </div>;
-        
-
 }
