@@ -20,3 +20,8 @@ Application to host timer activities with others. Minimalist design and function
 #### 📝Notes📝
 
 * For creating the webserver, the custom url should be created after the user opts to create a room avoid creating a room unecessarily.
+
+##### Process for handling room creation
+1. User arrives at the home url ending in '/'
+2. User clicks the create room to generate a url to share. i.e timerapp.com/few3!vf
+   * This also redirects the user to that same url so they are in the same room.
