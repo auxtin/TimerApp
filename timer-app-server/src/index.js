@@ -42,6 +42,10 @@ io.on('connection', (socket) => {
   //   // res.send(`hello  from the server realm`);
   //   res.send(socket.id);
   // });
+  socket.on('custom-event',(timer) => {
+    console.log(`Customer event hit! 🤣`)
+    console.log(timer)
+  })
   socket.on('disconnect', () => {    
     console.log(`${socket.id} disconnected 👋`);
   });

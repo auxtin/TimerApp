@@ -3,8 +3,6 @@ import { nanoid } from 'nanoid'
 import { io } from "socket.io-client";
 
 const socket = io('http://localhost:4000');
-const timer = document.getElementsByClassName("clock")
-
 // client-side connection using https://socket.io/docs/v4/server-socket-instance/
 socket.on("connect", () =>{
     console.log(`Connected to the backend🎉`)
@@ -35,13 +33,14 @@ export default function Timer() {
             } else {
                 setSeconds(seconds - 1);
             }
-
+            // console.log(timer)
+            socket.emit('custom-event',timer) 
 
         }, 1000);
     }, [seconds]);
-
     const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
     const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
+    const timer = `${timerMinutes}:${timerSeconds}`
     const url = nanoid(6);
     return <div className="timer">Hi there👋 
         <div className = "title">⏲Timer⏲</div>
