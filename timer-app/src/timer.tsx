@@ -1,11 +1,20 @@
 import React, {useState, useEffect} from "react";
 import { nanoid } from 'nanoid'
+import { io } from "socket.io-client";
 
+const socket = io('http://localhost:4000');
+const timer = document.getElementsByClassName("clock")
+
+// client-side connection using https://socket.io/docs/v4/server-socket-instance/
+socket.on("connect", () =>{
+    console.log(`Connected to the backend🎉`)
+    console.log(socket.id)
+})
 export default function Timer() {
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(5);
+    const [minutes, setMinutes] = useState(25);
+    const [seconds, setSeconds] = useState(0);
     const [displayMessage, setDisplayEffect] = useState(false);
-
+    
     useEffect (() => {
         let interval = setInterval(() => {
             clearInterval(interval);
@@ -14,16 +23,19 @@ export default function Timer() {
                     setSeconds(59);
                     setMinutes(minutes-1);
                 } else {
+                    // this code is used to implement a break
+                    // ----
                     // let minutes = displayMessage ? 24: 4;
                     // let second = 59;
-
                     // setSeconds (second);
                     // setMinutes (minutes);
+                    // ----
                     setDisplayEffect(!displayMessage);
                 }
             } else {
                 setSeconds(seconds - 1);
             }
+
 
         }, 1000);
     }, [seconds]);

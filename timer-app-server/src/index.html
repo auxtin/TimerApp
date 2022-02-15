@@ -10,6 +10,9 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
+      io.on('connect', ()=> {
+         console.log(socket.id)
+      })
     </script>
    </body>
 </html>
