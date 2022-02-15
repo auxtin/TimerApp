@@ -16,6 +16,7 @@ Application to host timer activities with others. Minimalist design and function
 * implement shared session (todo list updates in real time on everyone's screen)
 * implement link to create a session
 * implement chat functionality (wishlist)
+* implement security with okta (wishlist) https://developer.okta.com/blog/2021/07/14/socket-io-react-tutorial
 * decide where to host
 * decide how to host reactjs app
 

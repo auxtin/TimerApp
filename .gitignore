@@ -48,3 +48,5 @@ chrome-user-data
 *.swp
 *.swo
 
+timer-app/yarn.lock
+timer-app/yarn.lock
