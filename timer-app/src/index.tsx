@@ -1,15 +1,33 @@
 import { ColorModeScript } from "@chakra-ui/react"
 import * as React from "react"
 import ReactDOM from "react-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
 import { App } from "./App"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
 
+
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
+  <React.StrictMode> 
     <ColorModeScript />
-    <App />
-  </React.StrictMode>,
+    {/* <App /> */}
+    <Routes>
+    <Route path="/" element={<App />} />
+    <Route path=":roomId" element={<App />} />
+    <Route
+      path="*"
+      element={
+        <main style={{ padding: "1rem" }}>
+          <p>There's nothing here!</p>
+        </main>
+      }
+    />
+    </Routes>
+
+  </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById("root"),
 )
 

@@ -9,6 +9,7 @@ Application to host timer activities with others. Minimalist design and function
     - link suffix generation using [nanoid](https://github.com/ai/nanoid)
     - created a room using [Socket.IO](https://socket.io/)
     - library to host a shared session for the chat, sending an invite link, and sharing a session with each other
+    - client side routing using [react-router](https://reactrouter.com)
 
 #### 📃Tasks/Todo📃:
 
@@ -42,9 +43,18 @@ Application to host timer activities with others. Minimalist design and function
 #### 🐛🐜BUGS🐜🐛
 * Need to understand and anticipate [CORS issue](https://www.youtube.com/watch?v=hxyp_LkKDdk&ab_channel=HongLy), also [usedful](https://www.thesslstore.com/blog/ssl_error_rx_record_too_long/) (this might have been avoided?)
 
-#### Milestones
+## Milestones
 🏆2.13🏆
 * broke ground and piece together front end with timer function and themed ui
 * started server and realtime connectivity
+
 🏆2.14🏆
-* connected front to backend after working on the problm all day
+* connected front to backend after working on the problem all day
+
+🏆2.20🏆
+
+* 💳 Bought domain 💳
+* 🚀 Deployed to knightsofthestudytable.com w/ firebase 🚀
+
+🏆3.1🏆
+* Added dynamic client side routing for room feature 
