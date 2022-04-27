@@ -15,6 +15,8 @@ import RoomLink from "./roomLink";
 import './App.css';
 // import { Logo } from "./Logo"
 
+export const JoinedRoomContext = React.createContext("Not in a room");
+
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Box textAlign="center" fontSize="xl" bgGradient='linear(to-r, gray.300, yellow.400, pink.200)'>
@@ -22,8 +24,8 @@ export const App = () => (
         <ColorModeSwitcher justifySelf="flex-end" />
         <VStack spacing={8}>
           <Timer/>
-          <RoomLink/>
-        </VStack>
+          {/* <RoomLink/> */}
+          </VStack>
       </Grid>
     </Box>
   </ChakraProvider>

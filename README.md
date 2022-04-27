@@ -10,6 +10,7 @@ Application to host timer activities with others. Minimalist design and function
     - created a room using [Socket.IO](https://socket.io/)
     - library to host a shared session for the chat, sending an invite link, and sharing a session with each other
     - client side routing using [react-router](https://reactrouter.com)
+    - 
 
 #### 📃Tasks/Todo📃:
 
@@ -34,6 +35,9 @@ Application to host timer activities with others. Minimalist design and function
  * [basic timer reference (first implementation)](https://www.youtube.com/watch?v=9z1qBcFwdXg&t=303s&ab_channel=AleksPopovic)
  * [around two minutes shows realtime todo list using socket.io](https://www.youtube.com/watch?v=YIRXIe_bZok&ab_channel=MicheleRiva )
  * [circular progress bar implementation](https://www.youtube.com/watch?v=B1tjrnX160k&t=247s&ab_channel=CodingWithDawid)
+ * [using firebase and namecheap](https://dev.to/happyharis/firebase-hosting-with-namecheap-domains-30gk)
+ * [deployment](https://www.youtube.com/watch?v=1wZw7RvXPRU&ab_channel=CleverProgrammer)
+
 
 #### Process for handling room creation
 1. User arrives at the home url ending in '/'
@@ -52,9 +56,12 @@ Application to host timer activities with others. Minimalist design and function
 * connected front to backend after working on the problem all day
 
 🏆2.20🏆
-
+* 🗣talked about use case more 🗣
 * 💳 Bought domain 💳
-* 🚀 Deployed to knightsofthestudytable.com w/ firebase 🚀
+* 🚀deployed [landing page](https://knightsofthestudytable.com/) 🚀
 
 🏆3.1🏆
 * Added dynamic client side routing for room feature 
+
+🏆4.27🏆
+* Picked the project back up and start cleaning up code

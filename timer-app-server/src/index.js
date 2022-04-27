@@ -42,10 +42,28 @@ io.on('connection', (socket) => {
   //   // res.send(`hello  from the server realm`);
   //   res.send(socket.id);
   // });
+  //   app.get('/*', (req, res) => {
+  //     console.log("Hello")
+  //   res.send(`hi from the backend 🍑`);
+  //   res.send(`hello  from the server realm`);
+  //   // res.send(socket.id);
+  // });
   socket.on('custom-event',(timer) => {
     console.log(`Customer event hit! 🤣`)
     console.log(timer)
   })
+  socket.on('send-timer',(timer) => {
+    socket.join("test")
+    socket.to("test").emit('share-timer',timer)
+    console.log(`Send timer event hit! 🤣`)
+    console.log(timer)
+  })
+  socket.on("join-room", (data) => {
+    socket.join(data.room);
+    console.log(`${socket.id} has joined ${data.room} room`);
+    socket.emit("user-joined", `${socket.id} has joined ${data.room} rooascascsacm`)
+    socket.emit("global-clock", data.clockProp)
+  });
   socket.on('disconnect', () => {    
     console.log(`${socket.id} disconnected 👋`);
   });
