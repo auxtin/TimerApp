@@ -49,7 +49,7 @@ io.on('connection', (socket) => {
   //   // res.send(socket.id);
   // });
   socket.on('custom-event',(timer) => {
-    console.log(`Customer event hit! 🤣`)
+    console.log(`Custom event hit! 🤣`)
     console.log(timer)
   })
   socket.on('send-timer',(timer) => {

@@ -65,3 +65,7 @@ Application to host timer activities with others. Minimalist design and function
 
 🏆4.27🏆
 * Picked the project back up and start cleaning up code
+
+🏆8.5🏆
+* Picked the project back up again and reorienting from where I left off. Deciding to pivot to a different approach: instead of having a timer that create a room, there will first be a landing page welcoming the user to the website(LandingPage), followed by some animation to the next view prompting the user if they would like to study alone, create a room or join a room.
+* For the transition for the landing page, was thinking of having some night clashing  to the next screen prompting the user what they want to do

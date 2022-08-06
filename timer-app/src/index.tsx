@@ -9,35 +9,35 @@ import * as serviceWorker from "./serviceWorker"
 import { createStore } from "redux"
 import { Provider } from "react-redux"
 import { reducer } from "./reducers/bankingReducer"
-
+import LandingPage  from "./landingPage"
 const store = createStore(reducer)
 
 ReactDOM.render(
   <Provider store={store}>
 
-  <BrowserRouter>
-    <React.StrictMode>
-      <ColorModeScript />
-      {/* <App /> */}
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path=":roomId" element={
+    <BrowserRouter>
+      <React.StrictMode>
+        <ColorModeScript />
+        {/* <App /> */}
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path=":roomId" element={
             <App />
-        } />
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: "1rem" }}>
-              <p>There's nothing here!</p>
-            </main>
-          }
-        />
-      </Routes>
+          } />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+        </Routes>
 
-    </React.StrictMode>
-  </BrowserRouter>
+      </React.StrictMode>
+    </BrowserRouter>
   </Provider>
-,
+  ,
   document.getElementById("root"),
 )
 
