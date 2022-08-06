@@ -1,25 +1,27 @@
 import { Button, FormControl, FormLabel, Input, Stack } from "@chakra-ui/react";
 import { useState } from "react";
 import CreateModal from "./CreateModal.js";
+import  {App}  from "./App";
 function LandingPage() {
   // state for handling modals for creating or joining a room
   const [isCreateRoomOpen, setIsCreateRoomOpen] = useState(false);
   const [isJoinRoomOpen, setIsJoinRoomOpen] = useState(false);
   // state to handle hiding other elements
   const [hide, setHide] = useState(true);
+  const [studyAlone, setStudyAlone] = useState(false);
   return (
     <div>
-      <div>
+      {!studyAlone && <div>
         <h1> Hi! Welcome to Knights of the Study Table</h1>
         <p>
           Knights of the Study Table is a place where you can meet up with other
           knights to get stuff done.
         </p>
-      </div>
+      </div>}
       <div>
-        <h4>What would you like to do?</h4>
+        {hide && <h4>What would you like to do?</h4>} 
         <Stack direction="column" align="center" spacing={4}>
-          {hide && <Button>Study Alone</Button>}
+          {hide && <Button onClick={() => {setHide(false); setStudyAlone(true)}}>Study Alone</Button>}
           {hide && (
             <Button
               size="lg"
@@ -65,6 +67,7 @@ function LandingPage() {
             </FormControl>
           </CreateModal>
         </Stack>
+        {studyAlone && <App></App>}
       </div>
     </div>
   );
